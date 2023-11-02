@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./script/main.js" defer></script>
+    <title>Мини игра</title>
+</head>
+<body>
+    <div class="upper_side">
+        <div class="black_header">
+            <h1>
+                Мини игра
+            </h1>
+            <div class="links_black_header">
+                <a href="../../index.html">На главную</a>
+                <a href="../../../new_material/page_new_mat.html" class="disabled_button">Назад</a>
+            </div>
+        </div>
+    </div>
+    <div class="main_window">
+        <div class="left_side">
+            <p class="left_side_text">
+                Перед вами задания разных уровней сложности. У вас 10 попыток, чтобы получить призовые 1550 очков. Кликните на карточку, чтобы перейти к заданию. Выберите вариант (варианты) ответа и нажмите кнопку «Ответить»
+            </p>
+            <div class="questions_cards_side">
+                <div class="very_easy_questions">
+                    <button id="very_easy_question_1" onclick="showQuestion(0)"><div class="correct_marker" id="correct_marker_1"></div>100</button>
+                    <button id="very_easy_question_2" onclick="showQuestion(1)"><div class="correct_marker" id="correct_marker_2"></div>100</button>
+                    <button id="very_easy_question_3" onclick="showQuestion(2)"><div class="correct_marker" id="correct_marker_3"></div>100</button>
+                </div>
+                <div class="easy_questions">
+                    <button id="easy_question_1" onclick="showQuestion(3)"><div class="correct_marker" id="correct_marker_4"></div>150</button>
+                    <button id="easy_question_2" onclick="showQuestion(4)"><div class="correct_marker" id="correct_marker_5"></div>150</button>
+                    <button id="easy_question_3" onclick="showQuestion(5)"><div class="correct_marker" id="correct_marker_6"></div>150</button>
+                </div>
+                <div class="middle_questions">
+                    <button id="middle_question_1" onclick="showQuestion(6)"><div class="correct_marker" id="correct_marker_7"></div>200</button>
+                    <button id="middle_question_2" onclick="showQuestion(7)"><div class="correct_marker" id="correct_marker_8"></div>200</button>
+                    <button id="middle_question_3" onclick="showQuestion(8)"><div class="correct_marker" id="correct_marker_9"></div>200</button>
+                </div>
+                <div class="middle_hard_questions">
+                    <button id="middle_hard_question_1" onclick="showQuestion(9)"><div class="correct_marker" id="correct_marker_10"></div>250</button>
+                    <button id="middle_hard_question_2" onclick="showQuestion(10)"><div class="correct_marker" id="correct_marker_11"></div>250</button>
+                    <button id="middle_hard_question_3" onclick="showQuestion(11)"><div class="correct_marker" id="correct_marker_12"></div>250</button>
+                </div>
+                <div class="hard_questions">
+                    <button id="hard_question_1" onclick="showQuestion(12)"><div class="correct_marker" id="correct_marker_13"></div>300</button>
+                    <button id="hard_question_2" onclick="showQuestion(13)"><div class="correct_marker" id="correct_marker_14"></div>300</button>
+                    <button id="hard_question_3" onclick="showQuestion(14)"><div class="correct_marker" id="correct_marker_15"></div>300</button>
+                </div>
+            </div>
+            <div class="scoring_side">
+                
+                <div class="number_of_points">
+                    <p>Количество очков</p>
+                    <p class="points" id="points_of_correct_1">0</p>
+                </div>
+                <div class="number_of_points">
+                    <p>Количество попыток</p>
+                    <p class="points" id="points_of_attempt_1"> </p>
+                </div>
+                <button id="result_button_3" class="result_button " onclick="showResultPopUP()">Результаты</button>
+            </div>
+        </div>
+        <div class="right_side">
+            <img src="./content/logo_of_profi.png" alt="">
+        </div>
+    </div>
+    <div id="result_popup_1" class="popup ">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div id="result_popup_header" class="popup_header">
+                    <button class="close_popup_button"><img src="./content/close.svg" alt="1" onclick="closeResultPopUp()"></button>
+                </div>
+                <div id="popup_text_result" class="popup_text">
+                    <div class="answers_part first">
+                        1. Количество тестовых (оцениваемых) заданий: <span id="place_question_number"></span>
+                    </div>
+                    <div class="answers_part first">
+                        2. Ваш результат: <span id="place_question_point"></span>
+                    </div>
+
+                    <div class="answers_part second">
+
+                        <div id="answer_diagram_1" class="pie animate no-round" ></div>
+
+                    </div>
+                    <div class="answers_part first">
+                        <p id="result_place_3">
+                                
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_answers" id="popup_answers_1">
+
+    </div>
+</body>
+</html>
